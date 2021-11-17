@@ -1,5 +1,5 @@
 import React from 'react';
-// import {Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 // import {login} from '../../actions/index'
 import {Redirect} from 'react-router-dom'
@@ -64,6 +64,11 @@ class Login extends React.Component{
                 <input type='password' placeholder='Your password here' ref={(b)=> this._password = b}/>
                 <button style={{display:'block', marginTop:'20px'}}  onClick = {() => this.loginSubmit()}>                
                 Submit
+                </button> 
+
+                {/* try */}
+                <button style={{display:'block', marginTop:'20px',}}>                
+                <Link to="/register" style={{ textDecoration:'none'}}>Register</Link>
                 </button> 
             </form>           
         </div>)
